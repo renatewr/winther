@@ -16,7 +16,8 @@
     <title>React App</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"> An app</div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -27,5 +28,70 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
+    <script>
+    const team = ['Renate', 'Kai-Rune', 'Eira', 'Ulrik'];
+    const [mom, dad, ...kids] = team;
+    
+    let inRing = 'Hulk Hogan';
+    let onSide = 'The Rock';
+    
+    [inRing, onSide] = [onSide, inRing];
+    
+    function convertCurrency (amount) {
+      const converted = { USD: amount * 0.76, GPB: amount * 0.5 };
+      return converted;
+    }    
+    const { USD, GPB } = convertCurrency(100);
+    console.log(USD, GPB);
+    
+    
+    const cuts = ['Chuck', 'Briskets', 'Shank', 'Short Rib'];
+    
+    //cuts.forEach((cut) => {
+      //console.log(cut);
+    //})
+    
+    //for (const index in cuts){
+      //console.log(cuts[index]);
+    //}
+    
+    for (const cut of cuts){
+      if (cut === 'Briskets'){
+        continue;
+      }
+      console.log(cut);
+    }
+    
+    
+    function addUpNumbers() {
+      let total = 0;
+      for (num of arguments) {
+        total += num;
+      }
+      //console.log(total);
+      return total;
+    }    
+    
+        
+    const heading = document.querySelector('.jump');
+    //let letters = Array.from(elms[0].textContent);
+    //const spans = sparan(heading.textContent);
+    //console.log(spans);
+    
+    //function sparan(word) {
+      //return [...word].map(letter => `<span></span>`);
+    //}
+    
+    
+    //const newLetters = letters.map((char) => `<span>${this}</span>`);
+    //console.log(newLetters.join());    
+      
+  
+        
+    </script>
+    
+
+    
+  </div>
   </body>
 </html>
